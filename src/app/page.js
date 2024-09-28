@@ -4,19 +4,26 @@ import IconDashboard from '@/components/IconDashboard'
 
 export default async function Home() {
   const iconDirectory = path.join(process.cwd(), 'public', 'icons')
-  let iconNames = []
-  
+  let categories = []
+  let iconsByCategory = {}
+
   try {
-    const iconFiles = await readdir(iconDirectory)
-    iconNames = iconFiles.filter(file => file.endsWith('.svg')).map(file => file.replace('.svg', ''))
+    categories = await readdir(iconDirectory)
+    for (const category of categories) {
+      const categoryPath = path.join(iconDirectory, category)
+      const iconFiles = await readdir(categoryPath)
+      iconsByCategory[category] = iconFiles
+        .filter(file => file.endsWith('.svg'))
+        .map(file => file.replace('.svg', ''))
+    }
   } catch (error) {
     console.error('Error reading icon directory:', error)
   }
 
   return (
     <main className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">SVG Icon Dashboard</h1>
-      <IconDashboard icons={iconNames} />
+      <h1 className="text-3xl font-bold mb-6">SVG Icon Dashboard</h1>
+      <IconDashboard categories={categories} iconsByCategory={iconsByCategory} />
     </main>
   )
 }

@@ -7,12 +7,24 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-icons": "svgr --icon --typescript --out-dir src/components/icons -- public/icons"
+    "generate-icons": "svgr --icon --typescript --out-dir src/components/icons -- public/All"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.446.0",
     "next": "14.2.13",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-virtualized-auto-sizer": "^1.0.24",
+    "react-window": "^1.8.10",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@svgr/cli": "^8.1.0",

@@ -1,0 +1,18 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const SvgLikebold = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 25 24"
+    {...props}
+  >
+    <path
+      fill="#171717"
+      d="M18.016 2h-12c-1.66 0-3 1.33-3 2.97v10.91c0 1.64 1.34 2.97 3 2.97h.76c.8 0 1.56.31 2.12.87l1.71 1.69c.78.77 2.05.77 2.83 0l1.71-1.69c.56-.56 1.33-.87 2.12-.87h.75c1.66 0 3-1.33 3-2.97V4.97c0-1.64-1.34-2.97-3-2.97m-5.72 12.96c-.15.05-.4.05-.56 0-1.3-.45-4.22-2.3-4.22-5.45.01-1.39 1.12-2.51 2.5-2.51.82 0 1.54.39 2 1 .46-.61 1.18-1 2-1 1.38 0 2.5 1.12 2.5 2.51-.01 3.15-2.92 5-4.22 5.45"
+    />
+  </svg>
+);
+export default SvgLikebold;
